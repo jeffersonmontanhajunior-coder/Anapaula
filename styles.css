@@ -226,17 +226,22 @@ img { max-width: 100%; height: auto; display: block; }
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo img { border-radius: 4px; }
 .logo-caption {
-  font-size: 12px;
+  font-size: 10.5px;
   color: var(--color-text-muted);
-  letter-spacing: 0.03em;
-  max-width: 90px;
+  letter-spacing: 0.02em;
+  max-width: 72px;
   line-height: 1.25;
 }
-@media (max-width: 480px) { .logo-caption { display: none; } }
+@media (min-width: 480px) {
+  .logo-caption { font-size: 12px; max-width: 90px; letter-spacing: 0.03em; }
+}
 .header-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-m);
+  gap: var(--space-xs);
+}
+@media (min-width: 480px) {
+  .header-actions { gap: var(--space-m); }
 }
 .nav-list {
   display: flex;
@@ -332,7 +337,10 @@ img { max-width: 100%; height: auto; display: block; }
   border: none;
 }
 .btn-primary:hover { background: var(--color-primary-dark); }
-.nav-cta { padding: 10px 20px; font-size: 15px; }
+.nav-cta { padding: 8px 14px; font-size: 13px; }
+@media (min-width: 480px) {
+  .nav-cta { padding: 10px 20px; font-size: 15px; }
+}
 .btn-large { padding: 18px 36px; font-size: 17px; }
 
 /* --- Seções --- */
